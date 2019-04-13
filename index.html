@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>A-Frame Click & Drag Component - Basic</title>
+    <script src="aframe-master.js"></script>
+  </head>
+  <body>
+    <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
+      <a-assets>
+        <a-mixin id="text"
+                 text="align: center; width: 5;
+                 value: VR_Classroom">
+        </a-mixin>
+      </a-assets>
+      <a-assets>
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+      </a-assets>
+      <a-assets>
+        <img id="thumbCity" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/city.png">
+      </a-assets>
+      <!-- text -->
+      <a-text vive-controls="hand: left" mixin="text" font="kelsonsans" position="0 4 -5" wrap-count="13" color=red></a-text>
+
+      <!-- door  -->
+      <a-link href="lab.html" position="0 2 -2" image="#thumbCity"></a-link>
+
+      <!-- base -->
+      <a-plane static-body position="0 0.1 -5 " rotation="-90 0 0" width="200" height="200" color="#000000"></a-plane>
+
+
+      <!-- camera -->
+      <a-camera></a-camera>
+      <!-- sky and ground -->
+      <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+      <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
