@@ -11,28 +11,37 @@
                  value: VR_Classroom">
         </a-mixin>
       </a-assets>
-      <a-assets>
+      <!-- <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-      </a-assets>
+      </a-assets> -->
       <a-assets>
         <img id="thumbCity" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/city.png">
       </a-assets>
+
+      <a-assets>
+        <p id="lab"></p>
+      </a-assets>
+
       <!-- text -->
-      <a-text vive-controls="hand: left" mixin="text" font="kelsonsans" position="0 4 -5" wrap-count="13" color=red></a-text>
+      <a-text value="Hello, Alex!" position="-0.8 1.7 -2.9" color="black" width="7"></a-text>
+      <a-box position="0.01 1.7 -3" rotation="0 0 0" width="2" height="0.5" depth="0.1" color=""></a-box>
+
+      <!-- banner -->
+      <a-text text="align: center" value="H.I.V.E" position="0 4 -5" color="yellow" scale="15 10"></a-text>
 
       <!-- door  -->
-      <a-link title="LAB" href="lab.html" position="0 2 -2" image="#thumbCity"></a-link>
+      <a-link title="LAB" href="lab.html" position="0 2 -5 " image="#thumbCity"></a-link>
 
       <!-- base -->
-      <a-plane static-body position="0 0.1 -5 " rotation="-90 0 0" width="200" height="200" color="#000000"></a-plane>
+      <a-plane position="0 0.1 0 " rotation="-90 0 0" scale="5 5" color="green"></a-plane>
+      <a-sky color="blue"></a-sky>
 
 
       <!-- camera -->
-      <a-camera></a-camera>
       <!-- sky and ground -->
-      <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
-      <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+      <!-- <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+      <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky> -->
 
     </a-scene>
   </body>
