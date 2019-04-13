@@ -1,48 +1,42 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="custom.css" rel="stylesheet">
     <title>H.I.V.E</title>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>  </head>
   </head>
   <body>
-    <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
-      <a-assets>
-        <a-mixin id="text"
-                 text="align: center; width: 5;
-                 value: VR_Classroom">
-        </a-mixin>
-      </a-assets>
-      <!-- <a-assets>
-        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-      </a-assets> -->
-      <a-assets>
-        <img id="thumbCity" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/city.png">
-      </a-assets>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <a href="index.html">
+          <img src="LOGO1.jpg" id="icon" alt="User Icon" />
+        </a>
+      </div>
+      <!-- Login Form -->
+      <form action="landing.html">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
 
-      <a-assets>
-        <p id="lab"></p>
-      </a-assets>
+    </div>
+  </div>
 
-      <!-- text -->
-      <a-text value="Hello, Alex!" position="-0.8 1.7 -2.9" color="black" width="7"></a-text>
-      <a-box position="0.01 1.7 -3" rotation="0 0 0" width="2" height="0.5" depth="0.1" color=""></a-box>
-
-      <!-- banner -->
-      <a-text text="align: center" value="H.I.V.E" position="0 4 -5" color="yellow" scale="15 10"></a-text>
-
-      <!-- door  -->
-      <a-link title="LAB" href="lab.html" position="0 2 -5 " image="#thumbCity"></a-link>
-
-      <!-- base -->
-      <a-plane position="0 0.1 0 " rotation="-90 0 0" scale="5 5" color="green"></a-plane>
-      <a-sky color="blue"></a-sky>
-
-
-      <!-- camera -->
-      <!-- sky and ground -->
-      <!-- <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
-      <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky> -->
-
-    </a-scene>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
