@@ -8,6 +8,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  /* background-image: url("gravity.jpg");
+  background-size: cover; */
 }
 
 a {
