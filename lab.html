@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>VR_LAB_Computer Fundermantal</title>
+    <title>A-Frame Click & Drag Component - Basic</title>
 
     <script src="https://jesstelford.github.io/aframe-click-drag-component/build.js"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
@@ -21,16 +21,21 @@
       <a-plane static-body position="0 0.1 -5 " rotation="-90 0 0" width="200" height="200" color="#000000"></a-plane>
 
       <!-- elements -->
-      <a-entity dynamic-body click-drag>
-        <a-box position="0 5 0" scale="1 10 5" color=red rotation="0 0 0"></a-box>
-        <a-box position="-1 5 1" scale="1 1 1" color="#4CC3D9" rotation="0 0 0" ></a-box>
 
+
+      <a-entity dynamic-body click-drag >
+        <a-box position="0 5 0" scale="1 10 5" color=red rotation="0 0 0">
+          <a-animation attribute="material.opacity" begin="dragstart" from="1.0" to="0.2" dur="200"></a-animation>
+          <a-animation attribute="material.opacity" begin="dragend" from="0.2" to="1.0" dur="200"></a-animation>
+        </a-box>
+        <a-box position="-1 5 1" scale="1 1 1" color="#4CC3D9" rotation="0 0 0" >
+          <a-animation attribute="material.opacity" begin="dragstart" from="1.0" to="0.2" dur="200"></a-animation>
+          <a-animation attribute="material.opacity" begin="dragend" from="0.2" to="1.0" dur="200"></a-animation>
+        </a-box>
       </a-entity>
-
+      <a-text value="Hello, Alex!" position="-0.8 1.7 -2.9" color="white" width="7"></a-text>
+      <a-box position="0.01 1.7 -3" rotation="0 0 0" width="2" height="0.5" depth="0.1" color="black"></a-box>
       <!-- link -->
-      <a-entity link="href: index.html; title:My Home; image: #homeThumb"></a-entity>
-
-      <a-text vive-controls="hand: left" mixin="text" font="kelsonsans" position="0 4 -5" wrap-count="13" color=red></a-text>
       <!-- camera -->
       <a-entity>
         <a-camera>
