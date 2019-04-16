@@ -18,7 +18,7 @@
   </head>
   <body>
 
-    <a-scene>
+    <a-scene  raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse">
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
@@ -41,8 +41,9 @@
           <a-animation attribute="material.opacity" begin="dragend" from="0.2" to="1.0" dur="200"></a-animation>
         </a-box>
       </a-entity>
-      <a-text value="Hello, Alex!" position="-0.8 1.7 -2.9" color="white" width="7"></a-text>
-      <a-box position="0.01 1.7 -3" rotation="0 0 0" width="2" height="0.5" depth="0.1" color="black"></a-box>
+      <a-box position="0.01 1.7 -3" rotation="0 0 0" width="2" height="0.5" depth="0.1" color="yellow"></a-box>
+      <a-entity link="href: index.html; title:My Home;"></a-entity>
+      <a-text value="Hello, World!"></a-text>
       <!-- camera -->
       <a-entity>
         <a-camera>

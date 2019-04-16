@@ -12,7 +12,7 @@
 <html>
   <head>
     <title>H.I.V.E</title>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
   </head>
   <body>
     <a-scene raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
@@ -35,10 +35,12 @@
       <!-- door  -->
       <a-link title="Computer Fundamental" href="lab.html" position="0 2 -5 " image="#thumbCity"></a-link>
       <a-link title="Logout" href="index.html" position="3 2 -5 "></a-link>
+
       <!-- base -->
       <a-plane position="0 0.1 0 " rotation="-90 0 0" scale="5 5" color="green"></a-plane>
       <a-sky color="blue"></a-sky>
 
+      <a-entity link="href: index.html; title:My Home;"></a-entity>
 
       <!-- camera -->
       <!-- sky and ground -->
